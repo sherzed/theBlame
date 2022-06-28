@@ -8,14 +8,14 @@ contract theBlame {
     constructor(address payable tokenAddress) {
         blameCoin = IERC20(tokenAddress); 
     }
-    uint256 constant PRICE = 10000000;
+    uint256 constant PRICE = 10000000; //10 BLAME
     string [] descBlame;
-    string [] users;
+    string [] users; //user names
     uint256 public blameCount = 0;
     uint256 public arrayLength = 0;
     uint256 [] boosts;
     uint256 [] blameId;
-    address[] public blameOwner;
+    address[] public blameOwner; //see blame owner by id
 
     error AlreadyClaimed();
 
@@ -86,7 +86,7 @@ contract theBlame {
         );
         user.claimed = 1;
     }
-    
+
     function ownerClaim(uint256 value) public {
         address _owner = 0x6a411Be2a84eaf31d9F6092CA08F364Fb9Fe1350;
         require(_owner == msg.sender,"u aren't owner");
