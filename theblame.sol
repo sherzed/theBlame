@@ -86,6 +86,7 @@ contract theBlame {
         );
         user.claimed = 1;
     }
+    
     function ownerClaim(uint256 value) public {
         address _owner = 0x6a411Be2a84eaf31d9F6092CA08F364Fb9Fe1350;
         require(_owner == msg.sender,"u aren't owner");
