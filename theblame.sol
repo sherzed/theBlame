@@ -45,9 +45,9 @@ contract theBlame {
 
     function deleteBlame(uint256 _blameId) public {
         Claimer storage user = userClaimed[blameOwner[_blameId]];
-        uint256 lastprice = (PRICE * (PRICE + (boosts[_blameId] * 10**6))) / 5000000;
+        uint256 lastprice = (20 + boosts[_blameId] * 5) * 10**16;
         require(_blameId<=blameCount,"There is no blame for the id you specified.");
-        require( 
+        require(
             blameCoin.transferFrom(msg.sender, address(this), lastprice),
             "Transaction Error!"
         );
@@ -61,7 +61,7 @@ contract theBlame {
     function boostBlame(uint256 __blameId) public {
         require(__blameId<=blameCount-1,"There is no blame for the id you specified.");
         require( 
-            blameCoin.transferFrom(msg.sender, address(this), PRICE + 5000000),
+            blameCoin.transferFrom(msg.sender, address(this), 5000000),
             "Transaction Error!"
         );
         boosts[__blameId]++;
