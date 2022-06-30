@@ -1,5 +1,4 @@
 ![Blame](https://cdn.discordapp.com/attachments/538301409196638219/991385590106964008/Blame.png)
-# the Blame
 ## Kullanıcının ilk girişinde 50 token ücretsiz bir şekilde claim alma hakkı olacak. Bu 5 adet blame oluşturmaya tekabül ediyor.
 ## 💰  Blame oluşturma fiyatı; 10 Token
 ## 💰  Blame Boostlama fiyatı; 15 token
