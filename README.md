@@ -1,5 +1,5 @@
 ![Blame](https://cdn.discordapp.com/attachments/538301409196638219/991385590106964008/Blame.png)<br/>
-# TR
+# TR ![TR](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/1200px-Flag_of_Turkey.svg.png)
 ## Kullanıcının ilk girişinde 50 token ücretsiz bir şekilde claim alma hakkı olacak. Bu 5 adet blame oluşturmaya tekabül ediyor.
 ## 💰  Blame oluşturma fiyatı; 10 Token
 ## 💰  Blame Boostlama fiyatı; 5 token
