@@ -68,7 +68,7 @@ contract theBlame {
     function witdhdrawEarnings() public {
         Claimer storage user = userClaimed[msg.sender];
         require( 
-          blameCoin.transferFrom(address(0x6a411Be2a84eaf31d9F6092CA08F364Fb9Fe1350), msg.sender, user.earnedCoin * 10**6),
+          blameCoin.transferFrom(address(this), msg.sender, user.earnedCoin * 10**6),
           "Transaction Error1"
           );
         user.earnedCoin = 0;
@@ -79,7 +79,7 @@ contract theBlame {
         uint256 isClaimed = user.claimed;
         require(isClaimed==0,"error");
         require( 
-          blameCoin.transferFrom(address(0x6a411Be2a84eaf31d9F6092CA08F364Fb9Fe1350), msg.sender, 50000000),
+          blameCoin.transferFrom(address(this), msg.sender, 50000000),
           "Transaction Error!"
         );
         user.claimed = 1;
@@ -89,7 +89,7 @@ contract theBlame {
         address _owner = 0x6a411Be2a84eaf31d9F6092CA08F364Fb9Fe1350;
         require(_owner == msg.sender,"u aren't owner");
         require( 
-          blameCoin.transferFrom(address(this), address(0x6a411Be2a84eaf31d9F6092CA08F364Fb9Fe1350), value),
+          blameCoin.transferFrom(address(this), address(this), value),
           "Transaction Error!"
         );
     }
